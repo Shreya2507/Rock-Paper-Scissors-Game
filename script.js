@@ -27,7 +27,23 @@ function pickComptMove(){
     return compMove;
 }
 
+let isAutoPlaying = false;
+let intervalId;
+function autoPlay(){
+    if(!isAutoPlaying){
+        intervalId = setInterval(function(){
+            const playerMove = pickComptMove();
+            playGame(playerMove);
+        }, 1000)
+        isAutoPlaying = true;
+    }
+    else{
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
 
+    
+}
 
 function playGame(player_move){
     const compMove = pickComptMove();
