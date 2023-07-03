@@ -13,23 +13,19 @@
 <body>
     <p class="title">Rock Paper Scissors</p>
 
-    <button onclick="
-        playGame('rock');
-
-    " class="move-btn"><img src="images/rock-emoji.png" class="move-icon"></button>
-
-
-    <button onclick="
-        playGame('paper');
-        
-
-    " class="move-btn"><img src="images/paper-emoji.png" class="move-icon"></button>
+    <button class="move-btn js-rock-btn">
+        <img src="images/rock-emoji.png" class="move-icon">
+    </button>
 
 
-    <button onclick="
-        playGame('scissors');
-        
-    " class="move-btn"><img src="images/scissors-emoji.png" class="move-icon"></button>
+    <button class="move-btn js-paper-btn">
+        <img src="images/paper-emoji.png" class="move-icon">
+    </button>
+
+
+    <button class="move-btn js-scissors-btn">
+        <img src="images/scissors-emoji.png" class="move-icon">
+    </button>
 
     <p class="js-result result"></p>
     <p class="js-moves moves">
