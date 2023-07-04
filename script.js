@@ -36,14 +36,21 @@ function autoPlay(){
             playGame(playerMove);
         }, 1000)
         isAutoPlaying = true;
+        document.querySelector('.js-autoplay')
+            .innerHTML = 'Stop Playing';
+
     }
     else{
         clearInterval(intervalId);
         isAutoPlaying = false;
+        document.querySelector('.js-autoplay')
+            .innerHTML = 'Auto play';
     }
 
     
 }
+
+
 
 document.querySelector('.js-rock-btn')
     .addEventListener('click', () => {
@@ -60,6 +67,9 @@ document.body.addEventListener('keydown', (event) => {
     }
     else if(event.key == 's'){
         playGame('scissors');
+    }
+    else if(event.key == 'a'){
+        autoPlay();
     }
 });
 
